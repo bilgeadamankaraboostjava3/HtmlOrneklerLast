@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User List</title>
+    <link rel="stylesheet" href="css/usertable.css">
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Ad</th>
+                <th>Soyad</th>
+                <th>Resim</th>
+                <th>Islemler</th>                
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>0001</td>
+                <td>Muhammet</td>
+                <td>HOCA</td>
+                <td>
+                    <img class="zoom" src="https://randomuser.me/api/portraits/med/men/56.jpg">
+                </td>
+                <td>
+                    <button>Düzenle</button>
+                    <button onclick="sil(1)">Sil</button>
+                </td>                
+            </tr>
+            <tr>
+                <td>0002</td>
+                <td>Muhammet</td>
+                <td>HOCA</td>
+                <td>
+                    <img class="zoom"  src="https://randomuser.me/api/portraits/med/men/5.jpg">
+                </td>
+                <td>
+                    <button>Düzenle</button>
+                    <button onclick="sil(2)">Sil</button>
+                </td>                
+            </tr>
+            <tr>
+                <td>0003</td>
+                <td>Muhammet</td>
+                <td>HOCA</td>
+                <td>
+                    <img class="zoom"  src="https://randomuser.me/api/portraits/med/men/6.jpg">
+                </td>
+                <td>
+                    <button>Düzenle</button>
+                    <button onclick="sil(3)">Sil</button>
+                </td>                
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        function sil(id) {
+            alert(id+" numaralı Kayıt silindi.");
+        }
+    </script>
+</body>
+</html>
