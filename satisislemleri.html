@@ -19,8 +19,17 @@
         * -> çarpı nesne üretir
     -->
    <!-- Renk Paletleri...: https://flatuicolors.com/palette/gb --> 
+
+   <!--
+    input{
+        tüm inputların dizaynını değiştirir.
+    }
+    sadece text olarak giriş yapılan bir input u seçmek istiyorum.
+    -- input[type="text"]{}
+   -->
+  
     <div class="row">
-        <div class="col col-column xc yc col-5">
+        <div class="col col-column xc  col-5">
             <div class="form-element">
                 <label>Id</label>
                 <input type="text" name="id" id="txt_id">
@@ -44,18 +53,18 @@
         <div class="col xc yc col-3">            
             <button class="btn-new" type="submit">Kaydet</button>
         
-            <button type="submit">Düzenle</button>
+            <button class="btn-edit" type="submit">Düzenle</button>
         </div>
     </div>
-    <div class="row">
+    <div class="row yu">
         <br>
         <table class="table">
             <thead>
                 <tr>
-                    <th>id</th>
-                    <th>ad</th>
-                    <th>soyad</th>
-                    <th>adres</th>
+                    <th>Id</th>
+                    <th>Müşteri Adı</th>
+                    <th>Müşteri Soyadı</th>
+                    <th>Müşteri Adresi</th>
                 </tr>
             </thead>
             <tbody>
@@ -67,6 +76,18 @@
                 </tr>
                 <tr>
                     <td>002</td>
+                    <td>Deniz</td>
+                    <td>TETİK</td>
+                    <td>Denizli</td>                    
+                </tr>
+                <tr>
+                    <td>003</td>
+                    <td>Ahmet</td>
+                    <td>Kuş</td>
+                    <td>Ankara</td>                    
+                </tr>
+                <tr>
+                    <td>004</td>
                     <td>Deniz</td>
                     <td>TETİK</td>
                     <td>Denizli</td>                    
