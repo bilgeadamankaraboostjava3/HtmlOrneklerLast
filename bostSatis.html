@@ -23,6 +23,17 @@
    
     <div class="container-fluid"></div>
     <div class="container">
+      <div class="row">
+        <form action="https://www.akakce.com/arama/" method="get">
+          <div class="col">
+            <div class="mb-3">
+              <label class="form-label">Kelime</label>
+              <input type="text" class="form-control" name="q">
+            </div>
+            <button type="submit">Ara</button>
+          </div>
+        </form>
+      </div>
         <div class="row">
             <div class="col-md-8">
                 <form action="http://localhost:9090/musteri/save" method="post">
@@ -125,23 +136,48 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- Düzenle Modal Bitiş -->
+
+    <script>
+      // Parametresiz function
+      function tikla(){
+        alert("Tıklandı");
+      }
+      // Parametreli function
+      function tikla2(id){
+        alert("Tıklandı" + id);
+      }
+
+      function tikla3(isdelete){
+        if(isdelete == 'OK')
+          alert('Silindi');
+        else
+          alert('Silme İptal Edildi');
+      }
+
+    </script>  
+
+
     <script>
       function sil(){
         Swal.fire({
-          title: 'Are you sure?',
-          text: "You won't be able to revert this!",
+          title: 'Silme İşlemi',
+          text: "Seçili kaydı silmek istiyor musunuz?",
           icon: 'warning',
           showCancelButton: true,
           confirmButtonColor: '#3085d6',
           cancelButtonColor: '#d33',
-          confirmButtonText: 'Yes, delete it!'
+          confirmButtonText: 'Evet Sil!'
         }).then((result) => {
           if (result.isConfirmed) {
             Swal.fire(
               'Deleted!',
               'Your file has been deleted.',
               'success'
-            )
+            ).then(() =>{
+              alert('işlem tmm aferin.');
+            });
+          }else{
+            alert('Silme İptal Edildi');
           }
         })
       }
