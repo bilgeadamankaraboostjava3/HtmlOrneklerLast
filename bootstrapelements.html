@@ -9,6 +9,7 @@
         .mycontainer {
             height: 100px;
             background-color: #e46fee;
+            
         }
         .mycontainerbody {
             height: 500px;
@@ -16,8 +17,13 @@
             margin-top: 5px;
         }
         .rowh{
-            height: 150px;
+            height: 250px;
             background-color: #ef9739;
+        }
+        .rowh2{
+            margin-top: 10px;
+            height: 250px;
+            background-color: #16af3a;
         }
         .colh{
             margin-top: 4px;
@@ -31,16 +37,25 @@
     <div class="container-fluid mycontainer">
 
     </div>
-
+    <!-- 
+         justify-content-evenly -> kalan boşlukları eşit olarak ayarlar
+    -->
     <div class="container mycontainerbody">
-        <div class="row rowh">            
+        <div class="row rowh align-items-start">            
             <div class="col-xl-3 col-md-6 colh"><p>denememdeeee3medndfdkfddkfdsg</p></div>
-            <div class="col-xl-3 col-md-6 colh"><p>denememdeeee3medndfdkfddkfdsg</p></div>
-            <div class="col-xl-3 col-md-6 colh"><p>denememdeeee3medndfdkfddkfdsg</p></div>
-            <div class="col-xl-3 col-md-6 colh"><p>denememdeeee3medndfdkfddkfdsg</p></div>
+            <div class="col-xl-3 col-md-6 colh align-self-end"><p>denememdeeee3medndfdkfddkfdsg</p></div>
+            <div class="col-xl-3 col-md-6 colh align-self-center"><p>denememdeeee3medndfdkfddkfdsg</p></div>
+            <div class="col-xl-3 col-md-6 colh "><p>denememdeeee3medndfdkfddkfdsg</p></div>
         </div>
-        <div class="row">
-
+        <div class="row rowh2  justify-content-around">
+            <div class="col-md-3 colh"><p>denememdeeee3medndfdkfddkfdsg</p></div>
+            <div class="col-md-3 colh align-self-end"><p>denememdeeee3medndfdkfddkfdsg</p></div>
+       
+        </div>
+        <div class="row rowh2  justify-content-between">
+            <div class="col-md-3 colh"><p>denememdeeee3medndfdkfddkfdsg</p></div>
+            <div class="col-md-3 colh align-self-end"><p>denememdeeee3medndfdkfddkfdsg</p></div>
+       
         </div>
     </div>
 
