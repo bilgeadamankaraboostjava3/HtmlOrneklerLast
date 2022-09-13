@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model - DOM</title>
+</head>
+<body>
+    <label>Ad</label> <br><br>
+    <input type="text" id="txtad"><br><br>
+    <label>Soyad</label> <br><br>
+    <input type="text" id="txtsoyad"><br><br>
+    <button onclick="birlestir()">Test</button> <br><br>
+    <label>ad soyad birleşik...: </label>
+    <label id="lbladsoyad"></label>
+
+    <script>
+        function birlestir() {
+            /**
+             * Burada dökümandan (HTML Page den) ID dini berlirterek
+             * Html Elementini alıyoruz.
+             */
+              var inputad = document.getElementById('txtad');
+              var inputsoyad = document.getElementById('txtsoyad');
+              /*
+               Değişken Tanımlama 
+              */
+              var adsoyad = "";
+              /*
+              value -> input elementinin değerini alır.              
+              */
+              adsoyad = inputad.value + inputsoyad.value;
+              /*
+                label elementi seçilmeli ve içine değer atanmalı
+              */
+             var lbladsoyad = document.getElementById('lbladsoyad');
+             lbladsoyad.innerText = adsoyad;
+        }
+    </script>
+
+</body>
+</html>

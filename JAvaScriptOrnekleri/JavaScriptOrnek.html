@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script Örnekler</title>
+    <script src="javascriptornek.js"></script>
+</head>
+<body>
+    <!-- TAG içinde JS çalıştırmak -->
+    <button onclick="alert('tıklama yapıldı');">Tıkla Inner JS</button> <br><br>
+    <!-- Script TAG leri arasında yazıbilir -->
+    <button onclick="benitikla()">Script içi JS </button><br><br>
+    <script>
+        function benitikla() {
+            alert("Tıklama Yaptınız");
+        }
+    </script>
+    <!-- JS dosyası HTML içine import edilerek kullanılbilir -->
+    <button onclick="dosyatiklamaornegi()">Dosya olarak çağırılan JS</button>
+</body>
+</html>
