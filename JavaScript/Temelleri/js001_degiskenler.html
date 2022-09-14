@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="alert('selam arkadaşlar')">Haber var</button>
+    <script>        
+        console.log("Merhaba Dünya");
+        var a = 10;
+        var b = true;
+        var c = "Merhaba";
+        var d = 3.14;
+        console.log(d);
+        degisken = 'Merhaba Değişken';
+        console.log(degisken);
+        /**
+         * let
+         * const
+         */
+        let degisken2 = 'Merhaba Değişken 2';
+        console.log(degisken2);
+        degisken2 = 2;
+        console.log(degisken2);
+        /**
+         * final -> bir kere değer atayıp değiştiremiyordunuz
+         * const -> bir kere değer atayıp değiştiremiyorsunuz
+         *
+         */ 
+        const degisken3 = "Merhaba Değişken 3";
+        console.log(degisken3);
+        // degisken3 = 3; hata verir.
+        // console.log(degisken3);
+
+        /*
+            Kullanıcıdan alınan 2 değeri toplayalım.
+        */
+        let sayi1 = prompt("1. Sayıyı giriniz");
+        let sayi2 = prompt("2. Sayıyı giriniz");
+        console.log('iki sayının toplamı...: '+ (sayi1 + sayi2));
+
+    </script>
+</body>
+</html>
