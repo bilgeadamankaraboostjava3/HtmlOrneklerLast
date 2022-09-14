@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="row">
+        <div class="col">
+            <h2>Benim sitem</h2>
+        </div>
+        <div class="col">
+            <ul>
+                <li>Bmw</li>
+                <li id="audi">Audi</li>
+                <li>Volvo</li>
+                <li>Reanult</li>
+                <li>Citroen</li>
+            </ul>
+        </div>
+        <div class="col">
+
+        </div>
+    </div>
+    <script>
+        let baslik = document.querySelector('h2');
+        baslik.style.backgroundColor = 'red';
+
+        let lilistesi = document.querySelectorAll('li');
+        console.log(lilistesi[3]);
+        lilistesi[3].style.backgroundColor = 'yellow';
+        
+    </script>
+</body>
+</html>

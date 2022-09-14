@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kullanıcı Listesi</title>
+</head>
+<body>
+    
+    <button onclick="datalariCek()">Dataları Getir</button>
+    <br><br>
+    <label >Ad Soyad</label>
+    <h2><label id="lbladsoyad"></label></h2>
+    <img id="avatar" width="150px" height="150px" style="background-color:red">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        async function datalariCek() {
+          const data = await axios.get('https://random-data-api.com/api/v2/users?size=20')            
+             .then((response)=>{
+               return response.data;
+             })
+             //  Burada getirilen data JsonArray -> dizi objesi şeklindedir.
+            console.log(data); 
+            let adsoyad = data[3].first_name+' '+data[3].last_name;
+            let avatar = data[3].avatar;
+            document
+            .getElementById('lbladsoyad').innerText = adsoyad;
+            document
+            .getElementById('avatar').src = avatar;
+            document
+            .getElementById('avatar').style.backgroundColor = 'white';
+        }
+       
+        
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let arabalar = ["BMW", "Mercedes", "Volvo", "Audi", "Ford"];
+        console.log(arabalar);
+        let modeller = new Array("320", "E200", "XC90", "A6", "Fiesta");
+        //console.log(modeller);
+        // push -> dizinin sonuna eleman ekler
+        arabalar.push("Opel");
+        console.log(arabalar);
+        // unshift -> diznin başına eleman ekler
+        arabalar.unshift("Renault");
+        console.log(arabalar);
+        // push, pop -> LIFO
+        // pop -> dizinin sonundaki elemanı siler
+        var result = arabalar.pop();
+        console.log(arabalar);
+        console.log('pop işleminden dönen sonuç...: ',result);
+        // shift -> dizinin başındaki elemanı siler
+        result = arabalar.shift();
+        console.log(arabalar);
+        console.log('shift işleminden dönen sonuç...: ',result);
+        var sayilar = [5,0,9,1,7,4,2,6,3,8];
+        console.log(sayilar);
+        // sort -> diziyi sıralar
+        sayilar.sort();
+        console.log(sayilar);
+        var yenidizi = ['canan', 'ayşe', 'fatma', 'ahmet', 'mehmet'];
+        // reverse -> diziyi ters çevirir
+        console.log(yenidizi);
+        yenidizi.reverse();
+        console.log(yenidizi);
+        // splice -> dizinin belli bir indexinden başlayarak 
+        // istenilen sayıda elemanı silmek için kullanırız.
+        var silinen_elemanlar = yenidizi.splice(1,3);
+        console.log('dizinin kalan elemanları.....: ',yenidizi);
+        console.log('dizinin silinen elemanları...: ',silinen_elemanlar);
+        //-------------------------------------------------
+        // join
+        let code = ['3','A','9','E','0','5'];
+        console.log(code);
+        let code2 = code.join('');
+        console.log('birleştirilmiş kod..:: ',code2);
+        code3 = code.join('-');
+        console.log('birleştirilmiş kod..:: ',code3);
+        //-------------------------------------------------
+        let arabalar2 = ["BMW", "Mercedes", "Volvo", "Audi", "Volvo","Ford"];
+        // forEach -> dizici içinde dolaşır ancak
+        // method bir sonuc döndürmez
+        var resultfor = arabalar2.forEach(araba=>{
+            console.log(araba);
+        })
+        // map -> dizi içinde dolşır ve işlem sonucunda bir 
+        // dizi döner, koşullara bağlayarak dizinin dönül elemanlarına
+        // müdehale edebiliriz.
+        var resultmap =arabalar2.map(x=>{
+            console.log(x);
+            if(x.length>4)
+                return x;
+            else
+                return "Bunları sevmedim";          
+        });        
+        console.log('map ten dönen...: ',resultmap);
+        console.log('fordan dönen....: ',resultfor);
+        //--------------------------------
+        // filter
+        // uzunluğu 1-4 arasında olanları filtreler
+        console.log(arabalar2);
+        var result = arabalar2.filter(x=> x.length<5);
+        console.log('filter sonucu...: ',result);
+        //--------------------------------
+        // elemanlara erişim
+        console.log(arabalar2.findIndex(x=>x=="Volvo"));
+        console.log(arabalar2.indexOf("Volvo"));
+        console.log(arabalar2[2]);
+        console.log(arabalar2.lastIndexOf("Volvo"));
+        /**
+         * Dizinin içindeki elemanların tamamı girilen koşulu sağlıyor mu?
+         */
+        console.log(arabalar2.every(x=> x.length>4));
+        console.log(arabalar2.every(x=> x.length>=3));
+        /**
+         * Dizinin içindeki elemanların enaz 1 tanesi
+         * girilen koşulu sağlıyor mu?
+         */
+        console.log(arabalar2.some(x=> x.length>4));
+        console.log(arabalar2.some(x=> x.length<3));
+        
+    </script>
+</body>
+</html>

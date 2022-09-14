@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="alert('fsdfsfdsf')">InFuction</button>
+    <button onclick="myalert('kendim yazdım')">Script İçinde</button>
+    <script>
+        function myalert(message){
+            console.log(message);
+        }
+        function toplama(s1,s2) {
+            console.log(s1+s2);
+        }
+        toplama(5,6);
+        // ÖNEMLİ -> function ları bir değişkene atayabiliriz.
+        const toplama2 = function(s1,s2){
+            console.log('sayı1..: ', s1);
+            console.log('sayı2..: ', s2);            
+            return s1+s2;
+        }
+        console.log('toplam....: ',toplama2(54,87));
+    
+        // ArrowFunction
+        const toplam3 = (s1,s2) =>{
+            return s1+s2;
+        }
+       
+        console.log('toplam3....: ',toplam3(54,87));
+        
+    </script>
+</body>
+</html>
