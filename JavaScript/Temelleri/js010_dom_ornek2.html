@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Element Ekleme ve Silme</title>
+</head>
+<body>
+    <div class="container">
+
+    </div>
+
+    <script>
+        // Continer div i seçiyoruz
+        let container = document.querySelector('.container');
+        // yeni bir <li> elelment oluşturuyoruz.
+        const myLi = document.createElement('li');//li, a, button, img v.s.
+        // elemanımıza attiribute ekliyoruz. (class, id, value, href, src)
+        myLi.setAttribute('class','myli');
+        // elemanınıza text içerik ekliyoruz.
+        myLi.textContent = 'My li';
+        // oluşturulan bileşeni ilgili diğer bileşene ekliyoruz.
+        container.appendChild(myLi);
+        setInterval(() => {
+            container.textContent = 'Bu sayfa 3.5sn sonra kendini yok edecektir.';
+            setTimeout(() => {
+                container.remove(); // var olan bir bileşeni silmek için kullnılır.
+            }, 3500);
+        }, 500);
+    </script>
+</body>
+</html>

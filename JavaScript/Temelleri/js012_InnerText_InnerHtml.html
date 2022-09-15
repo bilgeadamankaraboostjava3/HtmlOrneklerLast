@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Bu konuda <strong>Ahmet Bey</strong> çok ciddi çalışmalar yürüttü</p>
+    <div>
+
+    </div>
+
+    <script>
+        let myP = document.querySelector('p');
+        console.log(myP.innerText);
+        console.log(myP.innerHTML);
+        let myBody = document.querySelector('body');
+       
+        let myDiv = document.querySelector('div');
+        //myDiv.innerText = "Buraya bir şeyler yazalım";
+        myDiv.innerHTML = 
+        "Buraya <a href='https://www.google.com' target='_blank'><strong>google</strong></a> adresini ekleyelim";
+        console.log(myBody.innerHTML);
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Örnek</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            margin: 10px;
+            float: left;            
+        }
+    </style>
+</head>
+<body>
+    <div class="kutu">
+
+    </div>
+    <button onclick="start()">Animasyon Başlasın</button>
+    <script>
+        let kutu = document.querySelector(".kutu");
+        let x = 0;
+        let y = 0;
+        /**
+         * Eğer belli aralıklarla kod çalıştırmak işlem yapmak 
+         * istiyor iseniz, Interval kullanmalısınız.
+         */
+        setInterval(()=>{ // function gövdesi
+            kutu.style.marginLeft = x+'px'; // margin-left
+            kutu.style.marginTop = y+'px';
+            if(x<150)
+                x++;
+            if(x>=150 && y<150)
+                y++;    
+        },40); // milisaniye cinsinden zaman
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local ve Session Storage</title>
+</head>
+<body>
+    
+    <button onclick="sessionekle()">Seesion a Ekle</button>
+    <button onclick="sessionsil()">Seesion dan Sil</button>
+    <button onclick="localekle()">Local a Ekle</button>
+    <button onclick="localsil()">Local den Sil</button>
+
+    <script>
+        // Session storage       
+        function sessionekle() {
+                sessionStorage.setItem("name",JSON.stringify([{
+                    "name": "Ahmet",
+                    "age": 25
+                }]));
+                let list = JSON.parse(sessionStorage.getItem("name"));
+                console.log(list[0].name);
+                
+        }
+        function sessionsil() {
+                sessionStorage.removeItem("name");
+        }
+        function localekle() {
+            localStorage.setItem("namelocal", "Ahmet Bey");
+        }
+        function localsil() {
+            localStorage.removeItem("namelocal");
+        }
+    
+    </script>
+</body>
+</html>

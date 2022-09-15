@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .kutu{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="alert('Selam')">Tıkla</button> <br><br>
+    <div class="kutu" >
+
+    </div> <br><br>
+    <input type="text" id="txtusername">
+    <script>
+        let kutu = document.querySelector('.kutu');
+        let durum = true;
+        const renkDegistir = () => {
+            if(durum)
+            kutu.style.backgroundColor = 'blue';
+            else
+            kutu.style.backgroundColor = 'red';
+            durum = !durum;
+        };
+       // kutu.addEventListener('mouseover',renkDegistir);
+        kutu.addEventListener('mouseout',renkDegistir);
+
+        let txtusername = document.querySelector('#txtusername');
+        const yazioku = (event) =>{
+            console.log(event.target.value);
+        }
+        // tuşa basılıp kaldırılınca tetiklenecek.
+        //txtusername.addEventListener('keyup',yazioku);
+        // tuşa basıldığı anda tetiklenir.
+        txtusername.addEventListener('keydown',yazioku);
+        let isClick= false;
+        const uzerindeMi = ()=>{
+            console.log('Üzerindeyim');
+        }
+        const onClick = ()=>{
+            console.log('Tıkladım');
+            isClick = true;
+        }
+        const onLeave = ()=>{
+            console.log('Tıklamayı bıraktım');
+            isClick = false;
+        }
+       
+        const mouseMove = (event) =>{
+            if(isClick){
+                kutu.style.left = event.clientX + 'px';
+                kutu.style.top = event.clientY + 'px';
+            }
+        };
+        document.onmousemove = mouseMove;
+        kutu.addEventListener('mouseover',uzerindeMi);
+        kutu.addEventListener('mousedown',onClick);
+        kutu.addEventListener('mouseup',onLeave);
+
+    </script>
+</body>
+</html>
